@@ -14,7 +14,8 @@ const styles = {
 class App extends Component {
   state = {
     products: [
-      { name : 'Mora', price: 1500, img: '/productos/mora.png' },
+      { name : 'Dios', price: 1500, img: '/productos/mora.png' },
+      { name : 'Bad Bunny', price: 2000, img: '/productos/badbunny.png' },
       { name : 'Rauw Alejandro', price: 2500, img: '/productos/rauw.png' },
       { name : 'Feid', price: 1900, img: '/productos/feid.png' },
       { name : 'Jhay Cortez', price: 2000, img: '/productos/jhaycortez.png' },
