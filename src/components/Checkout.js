@@ -1,5 +1,3 @@
-import { Component } from 'react';
-
 // Import necessary libraries
 const solanaWeb3 = require('@solana/web3.js');
 const splToken = require('@solana/spl-token');
@@ -56,6 +54,7 @@ shoppingCart.forEach((item) => {
     totalAmount += itemAmount; // Sum up the individual amounts
 });
 
+// transaction details
 import toast from "react-hot-toast";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -253,4 +252,5 @@ import {
         </>
     );
     }
+
 export default Home;
