@@ -11,7 +11,7 @@ const styles = {
         boxShadow: '0 8px 32px 0 rgba(0,0,0,0.37)',
     },
     productoHover: {
-        padding: '0px 15px 35px 0px',
+        padding: '0px 15px 35px 15px',
         background: 'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9))',
         webkitBackdropFilter: 'blur(10px)',
         borderRadius: '20px',
