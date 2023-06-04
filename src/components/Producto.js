@@ -31,7 +31,6 @@ const styles = {
         justifyContent: 'center',
     },
     priceCont: {
-        position: 'relative',
         display: 'flex',
         textAlign: 'center',
         alignItems: 'center',
