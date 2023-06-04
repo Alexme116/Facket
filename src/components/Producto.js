@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Button from './Button';
+import '../css/Producto.css';
 
 const styles = {
     producto: {
@@ -35,7 +36,7 @@ class Producto extends Component {
         const { producto } = this.props
 
         return (
-            <div style={styles.producto}>
+            <div className="glass">
                 <img style={styles.img} alt={producto.name} src={producto.img}/>
                 <h3 style={styles.sep}>{producto.name}</h3>
                 <p>${producto.price}</p>

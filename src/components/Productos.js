@@ -1,19 +1,12 @@
 import { Component } from 'react';
 import Producto from './Producto';
-
-const styles = {
-    productos: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridGap: '40px',
-    }
-}
+import '../css/Productos.css';
 
 class Productos extends Component {
     render() {
         const { productos } = this.props;
         return (
-            <div style={styles.productos}> // className="productos"
+            <div className="productos"> 
                 {productos.map(producto =>
                     <Producto
                         key={producto.name}
