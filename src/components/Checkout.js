@@ -1,59 +1,3 @@
-// Import necessary libraries
-const solanaWeb3 = require('@solana/web3.js');
-const splToken = require('@solana/spl-token');
-
-// Connect to the Solana network
-const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('devnet'));
-
-// Create a wallet keypair
-const walletKeyPair = solanaWeb3.Keypair.generate();
-
-// Mint tokens for each item
-async function mintToken(item, recipientAddress) {
-    const provider = new solanaWeb3.Account(walletKeyPair.secretKey); // add wallet keypair
-    const mint = new splToken.Token(
-        connection,
-        new solanaWeb3.PublicKey('your-mint-address'),
-        splToken.TOKEN_PROGRAM_ID,
-        provider // add wallet keypair
-    );
-
-    // Create a transaction to mint the tokens
-    const transaction = await mint.createMintToInstruction(
-        splToken.TOKEN_PROGRAM_ID,
-        new solanaWeb3.PublicKey('your-mint-address'),
-        recipientAddress,
-        provider.publicKey,
-        [],
-        item.quantity // Number of tokens to mint for the item
-    );
-
-    // Sign and send the transaction
-    const { blockhash } = await connection.getRecentBlockhash();
-    transaction.recentBlockhash = blockhash;
-    transaction.feePayer = provider.publicKey;
-
-    const signedTransaction = await solanaWeb3.sendAndConfirmTransaction(
-        connection,
-        transaction,
-        [provider] // add wallet keypair
-    );
-}
-
-// Example usage - add database? 
-const shoppingCart = [
-    { name: 'Item 1', quantity: 2 },
-    { name: 'Item 2', quantity: 3 },
-    // Add more items as needed
-];
-
-// Mint tokens for each item in the shopping cart
-shoppingCart.forEach((item) => {
-    mintToken(item, walletKeyPair.publicKey);
-    const itemAmount = item.quantity * item.price; // Calculate the amount for the item
-    totalAmount += itemAmount; // Sum up the individual amounts
-});
-
 // transaction details
 import toast from "react-hot-toast";
 import React, { useState, useEffect } from "react";
@@ -252,5 +196,53 @@ import {
         </>
     );
     }
+
+    import { ShyftNftSdk, SolanaWalletProvider } from "@shyftnetwork/shyft.js";
+    const sdk = new ShyftNftSdk({
+        apiUrl: "https://api.shyft.network",
+        apiKey: "YOUR_API_KEY",
+        network: "solana",
+        networkEndpoint: "https://devnet.solana.com",
+    });      
+
+    const createCollection = async () => {
+        try {
+            const collectionName = "My Collection";
+            const collectionSymbol = "MC";
+        
+            const collection = await sdk.createCollection(collectionName, collectionSymbol);
+            console.log("Collection created:", collection);
+            } catch (error) {
+            console.error("Error creating collection:", error);
+            }
+        };
+        
+    const mintNft = async () => {
+        try {
+        const collectionId = "COLLECTION_ID"; // Replace with the actual collection ID
+        const metadataUri = "https://my-website.com/nft-metadata.json"; // Replace with your NFT metadata URI
+        
+        const nft = await sdk.mint(collectionId, metadataUri);
+        console.log("NFT minted:", nft);
+        } catch (error) {
+        console.error("Error minting NFT:", error);
+        }
+        };
+        
+        const sendTransaction = async () => {
+        try {
+        // Existing code...
+        
+        // Mint the NFT
+        const nft = await mintNft();
+        console.log("Minted NFT:", nft);
+        
+        // Existing code...
+        } catch (error) {
+        console.error("ERROR SEND TRANSACTION", error);
+        toast.error("Error al enviar la transaccion");
+        }
+        };
+        
 
 export default Home;

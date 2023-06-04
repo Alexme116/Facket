@@ -23,6 +23,7 @@ class Navbar extends Component {
         return (
             <nav style={styles.navbar}>
                 <Logo />
+                <span style={{ marginLeft: '10px' }}>Facket Tickets</span>
                 <Carro
                     carro={carro}
                     esCarroVisible={esCarroVisible}
