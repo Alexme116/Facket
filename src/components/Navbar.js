@@ -14,8 +14,16 @@ const styles = {
         position: 'fixed',
         padding: '0 50px',
         boxShadow: '0 2px 3px rgb(0,0,0,0.1)',
-    }
-}
+    },
+    textStyle: {
+        fontSize: '16px',
+        fontFamily: 'Arial, sans-serif',
+        fontWeight: 'bold',
+        color: 'black',
+        textTransform: 'uppercase',
+        marginLeft: '5px',
+    },
+};
 
 class Navbar extends Component {
     render() {
@@ -23,7 +31,7 @@ class Navbar extends Component {
         return (
             <nav style={styles.navbar}>
                 <Logo />
-                <span style={{ marginLeft: '10px' }}>Facket Tickets</span>
+                <span style={styles.textStyle}>Your Text Here</span>
                 <Carro
                     carro={carro}
                     esCarroVisible={esCarroVisible}
