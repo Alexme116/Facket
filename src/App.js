@@ -3,18 +3,12 @@ import Productos from './components/Productos';
 import Layout from './components/Layout';
 import Title from './components/Title';
 import Navbar from './components/Navbar';
-
-const styles = {
-  page_B: {
-    backgroundColor: 'rgba(150, 150, 150, 0.48)',
-    minHeight: '100vh',
-  },
-}
+import './css/App.css';
 
 class App extends Component {
   state = {
     products: [
-      { name : 'Dios', price: 1500, img: '/productos/mora.png' },
+      { name : 'Mora', price: 1500, img: '/productos/mora.png' },
       { name : 'Bad Bunny', price: 2000, img: '/productos/badbunny.png' },
       { name : 'Rauw Alejandro', price: 2500, img: '/productos/rauw.png' },
       { name : 'Feid', price: 1900, img: '/productos/feid.png' },
@@ -25,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={styles.page_B}>
+      <div className='page_B'>
         <Navbar/>
         <Layout>
           <Title />

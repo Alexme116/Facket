@@ -16,9 +16,9 @@ const styles = {
     sep: {
         paddingTop: '30px',
     },
-    botones: {
+    boton: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
     },
     botonEliminar: {
         backgroundColor: 'rgba(110, 110, 110, 1)',
@@ -39,9 +39,9 @@ class Producto extends Component {
                 <img style={styles.img} alt={producto.name} src={producto.img}/>
                 <h3 style={styles.sep}>{producto.name}</h3>
                 <p>${producto.price}</p>
-                <div style={styles.botones}>
+                <div style={styles.boton}>
                     <Button>
-                        Agregar al carro
+                        Proceder al pago
                     </Button>
                 </div>
             </div>
