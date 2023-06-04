@@ -10,6 +10,14 @@ const styles = {
         border: "1px solid rgba(255,255,255,0.18)",
         boxShadow: "0 8px 32px 0 rgba(0,0,0,0.37)",
     },
+    productoHover: {
+        padding: '10px 15px',
+        background: 'linear-gradient(135deg, rgba(230,230,230,0.5), rgba(190,190,190,0.4))',
+        webkitBackdropFilter: 'blur(10px)',
+        borderRadius: '20px',
+        border: '1px solid rgba(255,255,255,0.18)',
+        boxShadow: '0 8px 32px 0 rgba(300,300,300,1)',
+    },
     img: {
         width: '95%',
         height: '55%',
@@ -37,22 +45,38 @@ const styles = {
 }
 
 class Producto extends Component {
-    render() {
-        const { producto } = this.props
+    state = {
+        isHovered: false,
+    };
 
-        return (
-            <div style={styles.producto}>
-                <img style={styles.img} alt={producto.name} src={producto.img}/>
-                <h3 style={styles.sep}>{producto.name}</h3>
-                <p style={styles.center}>${producto.price}</p>
-                <div style={styles.boton}>
-                    <Button>
-                        Proceder al pago
-                    </Button>
+    handleMouseEnter = () => {
+        this.setState({ isHovered: true });
+    };
+
+    handleMouseLeave = () => {
+        this.setState({ isHovered: false });
+    };
+
+    render() {
+            const { producto } = this.props;
+            const { isHovered } = this.state;
+            const productoStyle = isHovered ? styles.productoHover : styles.producto;
+
+            return (
+                <div
+                    style={productoStyle}
+                    onMouseEnter={this.handleMouseEnter}
+                    onMouseLeave={this.handleMouseLeave}
+                >
+                    <img style={styles.img} alt={producto.name} src={producto.img} />
+                    <h3 style={styles.sep}>{producto.name}</h3>
+                    <p style={styles.center}>${producto.price}</p>
+                    <div style={styles.boton}>
+                        <Button>Proceder al pago</Button>
+                    </div>
                 </div>
-            </div>
-        )
+            );
+        }
     }
-}
 
 export default Producto;

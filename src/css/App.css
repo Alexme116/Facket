@@ -1,4 +1,45 @@
 .page_B {
     background-color: rgba(150, 150, 150, 0.48);
-    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.particles {
+    position: relative;
+    display: flex;
+    z-index: -100;
+    margin-top: -30px;
+}
+
+.particles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #2359802c;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px #205a830a,
+    0 0 30px #2359802c,
+    0 0 50px #235980be;
+    animation: animate 500s linear infinite;
+    animation-duration: calc(150s / var(--i));
+}
+.particles span:nth-child(even) {
+    background: #9d33da21;
+    box-shadow: 0 0 0 15px #5e0e8d07,
+    0 0 30px #9d33da36,
+    0 0 20px #9d33da34;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(calc(100vh + 350px)) scale(0.3);
+    }
+    100% {
+        transform: translateY(0) scale(0.3);
+    }
 }
