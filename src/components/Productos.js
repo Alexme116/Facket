@@ -12,7 +12,6 @@ const styles = {
 class Productos extends Component {
     render() {
         const { productos } = this.props;
-
         return (
             <div style={styles.productos}>
                 {productos.map(producto =>
