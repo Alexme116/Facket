@@ -8,12 +8,12 @@ import './css/App.css';
 class App extends Component {
   state = {
     products: [
-      { name : 'Christekia', price: 1700, sol: 76, img: '/productos/christekia.png' },
-      { name : 'Christekia', price: 1700, sol: 76, img: '/productos/christekia1.png' },
-      { name : 'Christekia', price: 1700, sol: 76, img: '/productos/christekia2.png' },
-      { name : 'Christekia', price: 1700, sol: 76, img: '/productos/christekia2.png' },
-      { name : 'Christekia', price: 1700, sol: 76, img: '/productos/christekia1.png' },
-      { name : 'Christekia', price: 1700, sol: 76, img: '/productos/christekia.png' },
+      { name : 'Christekia', price: 1700, sol: 76, dia: 1, img: '/productos/christekia.png' },
+      { name : 'Christekia', price: 1700, sol: 76, dia: 2, img: '/productos/christekia1.png' },
+      { name : 'Christekia', price: 1700, sol: 76, dia: 3, img: '/productos/christekia2.png' },
+      { name : 'Christekia', price: 1700, sol: 76, dia: 4, img: '/productos/christekia2.png' },
+      { name : 'Christekia', price: 1700, sol: 76, dia: 5, img: '/productos/christekia1.png' },
+      { name : 'Christekia', price: 1700, sol: 76, dia: 6, img: '/productos/christekia.png' },
     ],
   }
 

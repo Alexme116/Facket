@@ -3,7 +3,7 @@ import Button from './Button';
 
 const styles = {
     producto: {
-        padding: '10px 15px',
+        padding: '0px 15px 35px 15px',
         background: 'linear-gradient(135deg, rgba(235,235,235,0.9), rgba(235,235,235,0.8))',
         webkitBackdropFilter: 'blur(10px)',
         borderRadius: '20px',
@@ -11,7 +11,7 @@ const styles = {
         boxShadow: '0 8px 32px 0 rgba(0,0,0,0.37)',
     },
     productoHover: {
-        padding: '10px 15px',
+        padding: '0px 15px 35px 0px',
         background: 'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9))',
         webkitBackdropFilter: 'blur(10px)',
         borderRadius: '20px',
@@ -20,7 +20,6 @@ const styles = {
     },
     img: {
         width: '95%',
-        height: '55%',
     },
     sep: {
         paddingTop: '30px',
@@ -43,6 +42,9 @@ const styles = {
     imgSol: {
         width: '15px',
         height: '17px',
+    },
+    dia: {
+        textAlign: 'center',
     },
 }
 
@@ -76,6 +78,7 @@ class Producto extends Component {
                         <img style={styles.imgSol} alt="Solana.png" src="/solanaLogo.png" />
                         <p>{producto.sol} $SOL</p>
                     </div>
+                    <h3 style={styles.dia}>DIA {producto.dia}</h3>
                     <div style={styles.boton}>
                         <Button>Proceder al pago</Button>
                     </div>
