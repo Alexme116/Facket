@@ -4,7 +4,7 @@ import Logo from './Logo';
 const styles = {
     navbar: {
         display: 'flex',
-        backgroundColor: '#f1ead2eb',
+        backgroundColor: 'rgba(235,235,235,0.9)',
         alignItems: 'center',
         width: '100%',
         height: '100px',
@@ -14,7 +14,7 @@ const styles = {
         textAlign: 'center',
     },
     titleStyle: {
-        width: '18%',
+        width: '13%',
     },
 };
 

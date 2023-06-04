@@ -37,7 +37,7 @@ const styles = {
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0px 134px 0px 134px',
+        padding: '0px 132px 0px 132px',
         fontFamily: 'Open Sans',
     },
     imgSol: {
@@ -74,7 +74,7 @@ class Producto extends Component {
                     <h3 style={styles.sep}>{producto.name}</h3>
                     <div style={styles.priceCont}>
                         <img style={styles.imgSol} alt="Solana.png" src="/solanaLogo.png" />
-                        <p>{producto.sol} SOL</p>
+                        <p>{producto.sol} $SOL</p>
                     </div>
                     <div style={styles.boton}>
                         <Button>Proceder al pago</Button>
