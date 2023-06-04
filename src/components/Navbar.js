@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import Logo from './Logo';
-import Carro from './Carro';
 
 const styles = {
     navbar: {
@@ -15,28 +14,20 @@ const styles = {
         padding: '0 50px',
         boxShadow: '0 2px 3px rgb(0,0,0,0.1)',
     },
-    textStyle: {
-        fontSize: '16px',
-        fontFamily: 'Arial, sans-serif',
+    titleStyle: {
+        fontSize: '2rem',
         fontWeight: 'bold',
-        color: 'black',
-        textTransform: 'uppercase',
-        marginLeft: '5px',
+        color: '#0A283E',
     },
 };
 
 class Navbar extends Component {
     render() {
-        const { carro, esCarroVisible, mostrarCarro } = this.props;
         return (
             <nav style={styles.navbar}>
                 <Logo />
-                <span style={styles.textStyle}>Your Text Here</span>
-                <Carro
-                    carro={carro}
-                    esCarroVisible={esCarroVisible}
-                    mostrarCarro={mostrarCarro}
-                />
+                <p style={styles.titleStyle}>Facket Ticket</p>
+                <Logo />
             </nav>
         )
     }

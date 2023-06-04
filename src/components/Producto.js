@@ -16,20 +16,34 @@ const styles = {
     sep: {
         paddingTop: '30px',
     },
+    botones: {
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+    botonEliminar: {
+        backgroundColor: 'rgba(110, 110, 110, 1)',
+        color: 'white',
+        padding: '15px 20px',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+    },
 }
 
 class Producto extends Component {
     render() {
-        const { producto, agregarAlCarro } = this.props
+        const { producto } = this.props
 
         return (
             <div style={styles.producto}>
                 <img style={styles.img} alt={producto.name} src={producto.img}/>
                 <h3 style={styles.sep}>{producto.name}</h3>
                 <p>${producto.price}</p>
-                <Button onClick={() => agregarAlCarro(producto)}>
-                    Agregar al carro
-                </Button>
+                <div style={styles.botones}>
+                    <Button>
+                        Agregar al carro
+                    </Button>
+                </div>
             </div>
         )
     }
