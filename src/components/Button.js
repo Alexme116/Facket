@@ -6,10 +6,10 @@ const styles = {
         color: 'white',
         padding: '15px 20px',
         border: 'none',
-        borderRadius: '5px',
+        borderRadius: '10px',
         cursor: 'pointer',
         fontWeight: 'bold',
-    }
+    },
 }
 
 class Button extends Component {
