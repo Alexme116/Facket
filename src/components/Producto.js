@@ -39,8 +39,18 @@ const styles = {
         borderRadius: '5px',
         cursor: 'pointer',
     },
-    center: {
+    priceCont: {
+        position: 'relative',
+        display: 'flex',
         textAlign: 'center',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0px 134px 0px 134px',
+        fontFamily: 'Open Sans',
+    },
+    imgSol: {
+        width: '15px',
+        height: '17px',
     },
 }
 
@@ -70,7 +80,10 @@ class Producto extends Component {
                 >
                     <img style={styles.img} alt={producto.name} src={producto.img} />
                     <h3 style={styles.sep}>{producto.name}</h3>
-                    <p style={styles.center}>${producto.price}</p>
+                    <div style={styles.priceCont}>
+                        <img style={styles.imgSol} alt="Solana.png" src="/solanaLogo.png" />
+                        <p>{producto.sol} SOL</p>
+                    </div>
                     <div style={styles.boton}>
                         <Button>Proceder al pago</Button>
                     </div>

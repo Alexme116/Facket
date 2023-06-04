@@ -13,7 +13,7 @@ class Logo extends Component {
             <div style={styles.logo}>
                 <img
                     src="/logo.png"
-                    alt="logo"
+                    alt="logo.png"
                     width="80"
                     height="75"
                 />

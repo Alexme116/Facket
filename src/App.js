@@ -8,12 +8,12 @@ import './css/App.css';
 class App extends Component {
   state = {
     products: [
-      { name : 'Mora', price: 1500, img: '/productos/mora.png' },
-      { name : 'Bad Bunny', price: 2000, img: '/productos/badbunny.png' },
-      { name : 'Rauw Alejandro', price: 2500, img: '/productos/rauw.png' },
-      { name : 'Feid', price: 1900, img: '/productos/feid.png' },
-      { name : 'Jhay Cortez', price: 2000, img: '/productos/jhaycortez.png' },
-      { name : 'Christekia', price: 1700, img: '/productos/christekia.png' },
+      { name : 'Mora', price: 1700, sol: 76, img: '/productos/mora.png' },
+      { name : 'Bad Bunny', price: 2000, sol: 90, img: '/productos/badbunny.png' },
+      { name : 'Rauw Alejandro', price: 1500, sol: 67, img: '/productos/rauw.png' },
+      { name : 'Feid', price: 1900, sol: 85, img: '/productos/feid.png' },
+      { name : 'Jhay Cortez', price: 2000, sol: 90, img: '/productos/jhaycortez.png' },
+      { name : 'Christekia', price: 1700, sol: 67, img: '/productos/christekia.png' },
     ],
   }
 
