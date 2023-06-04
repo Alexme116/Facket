@@ -37,7 +37,7 @@ const styles = {
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0px 132px 0px 132px',
+        padding: '0px 130px 0px 130px',
         fontFamily: 'Open Sans',
     },
     imgSol: {
