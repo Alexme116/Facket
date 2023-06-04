@@ -13,7 +13,7 @@ class Productos extends Component {
     render() {
         const { productos } = this.props;
         return (
-            <div style={styles.productos}>
+            <div style={styles.productos}> // className="productos"
                 {productos.map(producto =>
                     <Producto
                         key={producto.name}
