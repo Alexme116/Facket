@@ -1,5 +1,8 @@
 .page_B {
-    background-color: rgba(150, 150, 150, 0.48);
+    background-image: url("/public/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -7,6 +10,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    color: #f1ead2eb;
 }
 
 .particles {
@@ -20,12 +24,12 @@
     position: relative;
     width: 30px;
     height: 30px;
-    background: #2359802c;
+    background: #e3b10b7f;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 15px #205a830a,
-    0 0 30px #2359802c,
-    0 0 50px #235980be;
+    box-shadow: 0 0 0 15px #ad87097a,
+    0 0 30px #e3b10b71,
+    0 0 50px #e3b10b72;
     animation: animate 500s linear infinite;
     animation-duration: calc(150s / var(--i));
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const styles = {
     button: {
-        backgroundColor: '#0A283E',
+        backgroundColor: '#b28a0782',
         color: 'white',
         padding: '15px 20px',
         border: 'none',
@@ -11,7 +11,7 @@ const styles = {
         fontWeight: 'bold',
     },
     buttonHover: {
-        backgroundColor: '#114164',
+        backgroundColor: '#b28a07c5',
         color: 'white',
         padding: '15px 20px',
         border: 'none',

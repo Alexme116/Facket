@@ -2,8 +2,10 @@ import { Component } from 'react';
 
 const styles = {
     logo: {
+        display: 'flex',
         fontWeight: '700',
         fontSize: '2rem',
+        padding: '0px 65px 0px 65px',
     }
 }
 
