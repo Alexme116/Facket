@@ -1,14 +1,14 @@
 import { Component } from 'react';
 import Button from './Button';
-import '../css/Producto.css';
 
 const styles = {
     producto: {
-        border: '1px solid #eee',
-        boxShadow: '0 5px 5px rgb(0, 0, 0, 0.1)',
         padding: '10px 15px',
-        borderRadius: '5px',
-        background: 'rgba(250, 250, 250, 0.5)',
+        background: "linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0))",
+        webkitBackdropFilter: "blur(10px)",
+        borderRadius: "20px",
+        border: "1px solid rgba(255,255,255,0.18)",
+        boxShadow: "0 8px 32px 0 rgba(0,0,0,0.37)",
     },
     img: {
         width: '95%',
@@ -16,6 +16,8 @@ const styles = {
     },
     sep: {
         paddingTop: '30px',
+        textAlign: 'center',
+        marginBottom: '-10px',
     },
     boton: {
         display: 'flex',
@@ -29,6 +31,9 @@ const styles = {
         borderRadius: '5px',
         cursor: 'pointer',
     },
+    center: {
+        textAlign: 'center',
+    },
 }
 
 class Producto extends Component {
@@ -36,10 +41,10 @@ class Producto extends Component {
         const { producto } = this.props
 
         return (
-            <div className="glass">
+            <div style={styles.producto}>
                 <img style={styles.img} alt={producto.name} src={producto.img}/>
                 <h3 style={styles.sep}>{producto.name}</h3>
-                <p>${producto.price}</p>
+                <p style={styles.center}>${producto.price}</p>
                 <div style={styles.boton}>
                     <Button>
                         Proceder al pago

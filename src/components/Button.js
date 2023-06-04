@@ -8,6 +8,7 @@ const styles = {
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
+        fontWeight: 'bold',
     }
 }
 
