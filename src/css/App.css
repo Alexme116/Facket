@@ -1,8 +1,9 @@
 .page_B {
-    background-image: url("/public/fondo.png");
-    background-size: cover;
+    background: url("/public/fondo.png");
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .container {
