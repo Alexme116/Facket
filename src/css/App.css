@@ -4,6 +4,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-image: url("/public/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -43,6 +47,7 @@
 @keyframes animate {
     0% {
         transform: translateY(calc(100vh)) scale(0.3);
+        transform: translateY(calc(100vh + 350px)) scale(0.3);
     }
     100% {
         transform: translateY(0) scale(0.3);

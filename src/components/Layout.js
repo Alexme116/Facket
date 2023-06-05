@@ -12,6 +12,7 @@ const styles = {
     container: {
         width: '1200px',
         padding: '0px 0px 92px 0px',
+        paddingBottom: '40px',
     } 
 }
 
