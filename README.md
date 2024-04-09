@@ -1,4 +1,4 @@
-# Hackaton Proyect - Ticket sell
+# Hackaton Project - Ticket sell
 
 To run this program you need to install React
 Also you will need npm
